@@ -1,0 +1,13 @@
+RewriteEngine On
+
+<Files .*>
+	Order Deny,Allow
+	Deny from All
+</Files>
+
+RewriteRule ^(?:application|conf)\b.* index.php/$0 [L]
+
+#Rewrite all other URL's to index.php 
+RewriteCond %{REQUEST_URI} !^$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [NC,L]

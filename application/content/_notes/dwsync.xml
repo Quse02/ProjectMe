@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Employee_Directory.php" server="10.1.0.116//var/www-ssl/Portal/" local="130268316573442571" remote="130268316600000000" />
+<file name="db_connect.php" server="10.1.0.116//var/www-ssl/Portal/" local="130270900853425655" remote="130270900900000000" />
+<file name="Home.php" server="10.1.0.116//var/www-ssl/Portal/" local="130313450815469928" remote="130313450840000000" />
+<file name="user_auth.php" server="10.1.0.116//var/www-ssl/Portal/" local="130257134611845140" remote="130262238480000000" />
+<file name="Login.php" server="10.1.0.116//var/www-ssl/Portal/" local="130268317968672080" remote="130268318040000000" />
+<file name="Logout.php" server="10.1.0.116//var/www-ssl/Portal/" local="130252107297979411" remote="130252107490000000" />
+<file name="user_auth_fns.php" server="10.1.0.116//var/www-ssl/Portal/" local="130252092660000000" remote="130252092660000000" />
+<file name="Main_Admin.php" server="10.1.0.116//var/www-ssl/Portal/" local="130257131140305140" remote="130257131170000000" />
+<file name="Publication_Library.php" server="10.1.0.116//var/www-ssl/Portal/" local="130268327990404200" remote="130268328030000000" />
+<file name="Publication_Eligible.php" server="10.1.0.116//var/www-ssl/Portal/" local="130263246316009208" remote="130263246350000000" />
+<file name="Publication_Eligible_Submit.php" server="10.1.0.116//var/www-ssl/Portal/" local="130263247195509512" remote="130263247230000000" />
+<file name="Publication_Ineligible.php" server="10.1.0.116//var/www-ssl/Portal/" local="130263247517997957" remote="130263247550000000" />
+<file name="Publication_Ineligible_Submit.php" server="10.1.0.116//var/www-ssl/Portal/" local="130263247984704651" remote="130263248030000000" />
+<file name="Benefits.php" server="10.1.0.116//var/www-ssl/Portal/" local="130312666978223806" remote="130312667070000000" />
+<file name="Documents.php" server="10.1.0.116//var/www-ssl/Portal/" local="130313444878380105" remote="130313444900000000" />
+<file name="It.php" server="10.1.0.116//var/www-ssl/Portal/" local="130312670263520626" remote="130312670300000000" />
+<file name="Program_Management.php" server="10.1.0.116//var/www-ssl/Portal/" local="130312672575240169" remote="130312672700000000" />
+<file name="Quality.php" server="10.1.0.116//var/www-ssl/Portal/" local="130274448058437520" remote="130274448100000000" />
+<file name="Safety.php" server="10.1.0.116//var/www-ssl/Portal/" local="130272002617550447" remote="130272002650000000" />
+<file name="Timekeeping.php" server="10.1.0.116//var/www-ssl/Portal/" local="130271993311796155" remote="130271993350000000" />
+<file name="Travel.php" server="10.1.0.116//var/www-ssl/Portal/" local="130263950960741040" remote="130263951000000000" />
+<file name="Suggestion_Form.php" server="10.1.0.116//var/www-ssl/Portal/" local="130268313397394998" remote="130268314530000000" />
+<file name="Suggestion_Submit.php" server="10.1.0.116//var/www-ssl/Portal/" local="130268313691084364" remote="130268314530000000" />
+</dwsync>
