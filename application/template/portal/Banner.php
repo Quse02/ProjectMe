@@ -2,7 +2,6 @@
     <div id="banner">
         <div id="logo">
             <a href="Home"></a>
-            <h3>uartier, Shaun</h3>
         </div>
         <div id="menu">
             <ul>

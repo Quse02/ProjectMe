@@ -1,6 +1,6 @@
 <?php
 
-require_once('db_connect.php');
+require_once('connect.php');
 
 /*
 
@@ -47,70 +47,6 @@ $insert = $conn->prepare("insert into user (email, first, last, country, user_re
 					 ':country'=>trim($country),
 					 ':user_request_date'=>trim($user_request_date), 
 					 ':passwd'=>trim($passwd)));
-					 
-	if (!$res) {
-    throw new Exception('Could not register you in database - please try again later.');
-  }
-	
-	$conn->commit();
-	}		
-	catch(Exception $e)  {
-	$conn->rollback();
-	throw $e;
-	return false;
-		}
-
-  return true;
-}
-
-function register_non($email, $first, $last, $country, $program, $contract, $contract_start, $contract_end, $pi, $institution, $user_request_date) {
-// register new person with db
-// return true or error message
-
-  // connect to db
-  $conn = pdo_connect();
-  
-  // Statement Query
-  $stmt = $conn->prepare("select * from user
-                         where upper(email)=upper(:email)");
-						 
-$insert = $conn->prepare("insert into user (email, first, last, country, program, contract, contract_start, contract_end, pi, institution, user_request_date)
-						values (:email, 
-								:first, 
-								:last,
-								:country,  
-								:program,
-								:contract, 
-								:contract_start, 
-								:contract_end, 
-								:pi, 
-								:institution, 
-								:user_request_date)");
-								 
-	//Begin Transaction
-	$conn->beginTransaction();
-	
-	try	{
-	$res = $stmt->execute(array(
-					':email'=>trim($email)));
-		if (!$res) {
-			throw new Exception('Could not execute query');
-		}
-		if ($stmt->rowCount()>0)	{
-			throw new Exception('<p>That email is taken - go back and enter another one.</p>');
-		}
-	$res = $insert->execute(array(
-                     ':email'=>trim($email), 
-					 ':first'=>trim($first), 
-					 ':last'=>trim($last), 
-					 ':country'=>trim($country), 
-					 ':program'=>trim($program), 
-					 ':contract'=>trim($contract), 
-					 ':contract_start'=>trim($contract_start), 
-					 ':contract_end'=>trim($contract_end), 
-					 ':pi'=>trim($pi), 
-					 ':institution'=>trim($institution), 
-					 ':user_request_date'=>trim($user_request_date)));
 					 
 	if (!$res) {
     throw new Exception('Could not register you in database - please try again later.');

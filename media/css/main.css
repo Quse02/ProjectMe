@@ -1,0 +1,385 @@
+/******************************************************************************
+STRUCTURE
+******************************************************************************/
+/* global box-sizing */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    box-sizing: inherit;
+
+
+}
+*,
+*:after,
+*:before {
+
+}
+/* html element 62.5% font-size for REM use; This = 10px */
+html {
+    font-size: 20px;
+}
+
+body {
+    background: #031A1F url(../images/DCskyline.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    font-family: 'Merriweather',"Times New Roman", Times, serif;
+	line-height: 1.2em;
+    min-height: 100%;
+    margin: 0px;
+	}
+
+html, body {height: 100%;}
+
+#main-container {
+    width: 100%;
+    min-height: 650px;
+}
+
+#head-container {
+	width: 100%;
+}
+
+#banner {
+	max-width: 1100px;
+    width: 100%;
+	margin: 0 auto;
+    height: 45px;
+}
+    #logo {
+        background: transparent url(../images/Q_logo_small.png) no-repeat;
+        height: 40px;
+        width: 20%;
+        top: 5px;
+        position: relative;
+        display: inline-block;
+    }
+        #logo a {
+            display: block;
+            height: 40px;
+            left: 0;
+            position: absolute;
+            width:40px;
+            text-indent: -9999px;
+            overflow:hidden;
+        }
+        #logo h3 {
+            color: #ffffff;
+            position: relative;
+            left: 40px;
+        }
+
+    /*********
+      Menu
+    *********/
+    #menu {
+        width: 70%;
+        float: right;
+        font-family: 'Open Sans', sans-serif;
+        top: 12px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        position: relative;
+    }
+    #menu > ul {
+        height: 30px;
+        padding: 10px 15px 10px 0px;
+    }
+    #menu > ul > li {
+        margin: 0 5.5px;
+    }
+    #menu ul,
+    #menu li {
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #menu ul li {
+        float: left;
+        min-height: 1px;
+        vertical-align: middle;
+    }
+    #menu ul li.hover,
+    #menu ul li:hover {
+        position: relative;
+        cursor: default;
+    }
+    #menu a {
+        display: block;
+        line-height: 1em;
+        text-decoration: none;
+    }
+    /* Custom CSS Styles */
+    #menu ul a {
+        float: right;
+        display: inline-block;
+        width: 100px;
+        font-size: 0.875em;
+        padding: 8px 5px;
+        color: #fff;
+        background-color: transparent;
+        border: 0px solid #fff;
+        text-align: center;
+        text-shadow: #222222 -2px -2px 4px;
+        border-radius: 2px;
+        outline: none;
+        text-decoration: none;
+        transition: color 0.3s ease-out,
+        background-color 0.3s ease-out,
+        border-color 0.3s ease-out;
+    }
+
+    #menu > ul > li:hover > a {
+        background-color: #84B9D8;
+        border-color: #84B9D8;
+        border-radius: 2px;
+        color: #000;
+        text-shadow: #fff -1px -1px 2px;
+        transition: color 0.3s ease-in,
+        background-color 0.3s ease-in,
+        border-color 0.3s ease-in;
+    }
+    #menu > ul > li.active:hover > a {
+        background-color: #84B9D8;
+        border-color: #84B9D8;
+        border-radius: 2px;
+        color: #000;
+        text-shadow: #fff -1px -1px 2px;
+        transition: color 0.3s ease-in,
+        background-color 0.3s ease-in,
+        border-color 0.3s ease-in;
+    }
+
+    /* Gradient color1 - color2 - color1 */
+    hr.style-one {
+        display: block;
+        width: 100%;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+    }
+
+/*****************************************************
+FOOTER
+*****************************************************/
+#footer-container {
+    position: relative;
+    width: 100%;
+    margin-top: -98px; /* negative value of footer height */
+    height: 90px;
+    clear:both;
+}
+
+#footer {
+    width: 1100px;
+	margin: 0 auto;
+    color: #ffffff;
+}
+
+#social_media_icons {
+    position: relative;
+    top: 5px;
+    float: right;
+    width: 27%;
+}
+    .facebook_icon {
+        display: inline-block;
+        background: transparent url(../images/facebook.png) no-repeat;
+        background-size: contain;
+        height: 33px;
+        width: 33px;
+        margin: 0px 3px;
+    }
+    .twitter_icon {
+        display: inline-block;
+        background: transparent url(../images/twitter-bird.png) no-repeat;
+        background-size: contain;
+        height: 33px;
+        width: 33px;
+        margin: 0px 3px;
+    }
+    .linkedin_icon {
+        display: inline-block;
+        background: transparent url(../images/linkedin.png) no-repeat;
+        background-size: contain;
+        height: 33px;
+        width: 33px;
+        margin: 0px 3px;
+    }
+
+#more_info {
+    width: 60%;
+}
+
+/*****************************************************
+MAIN CONTENT DIV'S
+*****************************************************/
+#main {
+	position:relative;
+    width: 1100px;
+    min-height: 600px;
+}
+    #main .name {
+        position: relative;
+        top: 0px;
+        font-size: 1.600em;
+        text-shadow: #222222 -2px -2px 4px;
+
+    }
+    #main .occupation {
+        position: relative;
+        top: 165px;
+        margin-left: 50px;
+        font-size: 1.350em;
+        font-style: italic;
+        text-shadow: #222222 -2px -2px 4px;
+        color: #ffffff;
+    }
+    #main .location {
+        position: relative;
+        top: 370px;
+        font-size: 1.200em;
+        font-weight: bold;
+        text-shadow: #222222 -2px -2px 4px;
+        color: #ffffff;
+    }
+
+#content {
+    width: 1100px;
+    position:relative;
+    overflow:auto;
+    padding-bottom: 98px;
+    margin: 0 auto;
+}
+
+.circular-square {
+    border-radius: 50%;
+}
+
+/*****************************************************
+BASICS
+*****************************************************/
+p  {padding:3px;}
+img {border:none;}
+h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+}
+h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+}
+h3 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+}
+
+.ghost-button-footer {
+    float: right;
+    display: inline-block;
+    width: 150px;
+    font-size: 12px;
+    padding: 3px 5px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: color 0.3s ease-out,
+    background-color 0.3s ease-out,
+    border-color 0.3s ease-out;
+}
+.ghost-button-footer:hover,
+.ghost-button-footer:active {
+    background-color: #84B9D8;
+    border-color: #84B9D8;
+    border-radius: 5px;
+    color: #fff;
+    transition: color 0.3s ease-in,
+    background-color 0.3s ease-in,
+    border-color 0.3s ease-in;
+}
+
+/******************************************************************************
+LINKS
+******************************************************************************/
+a {
+	color: #ffffff;
+	text-decoration:none; 
+	font-weight: bold; 
+	outline:none; 
+	cursor:pointer;
+}
+a:link {
+	color: #ffffff;
+	text-decoration:none; 
+	font-weight: bold; 
+	outline:none;
+}
+a:visited {
+	color: #ffffff;
+	font-weight: bold; 
+	text-decoration:none; 
+	outline:none;
+}
+a:hover {
+	color: #aaaaaa; 
+	font-weight: bold; 
+	outline:none
+}
+a:active {
+	color: #ffffff;
+	font-weight: bold; 
+	text-decoration:none; 
+	outline:none;
+}
+
+/******************************************************************************
+CONNECT PAGE
+******************************************************************************/
+#twitter {
+    background: #eeeeee;
+    border: 2px solid #444444;
+    padding: 0px 5px;
+    float: right;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/************************************************************
+RESPONSIVE STYLE
+************************************************************/
+/*
+@media only screen and (max-width: 1100px) {
+    body {
+        font-size:120%;
+        .wrap {max-width:770px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size:100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size:90%;
+    }
+}
+
+*/

@@ -8,7 +8,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="media/css/home.css" />
+    <link rel="stylesheet" href="media/css/main.css" />
 
     <link rel="shortcut icon" href="media/images/Logo.png" />
 

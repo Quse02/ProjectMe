@@ -21,8 +21,9 @@ $_DBH_DEFAULT = 'connect';
 // Configuration Directory
 $_CONF_DIR = 'conf';
 
-//Environment 
-// $_DEV = ($_SERVER['HTTP_HOST'] == "localhost");
+//Environment
+// Comment out when ready to push to live domain
+$_DEV = ($_SERVER['HTTP_HOST'] == "localhost");
 
 /** Get and display content
  *  Don't need to change anything below

@@ -9,8 +9,7 @@
             <a class="ghost-button-footer" href="mailto:Shaun.Quartier@gmail.com">Contact Me</a>
         </div>
         <div id="more_info">
-            <p>Shaun Quartier - Web Developer <br />
-            Copyright @2015 All Rights Reserved.</p>
+            <p>Copyright @2015 All Rights Reserved.</p>
         </div>
     </div><!-- End Footer -->
 </div>

@@ -20,16 +20,6 @@ function valid_email($address) {
   }
 }
 
-function valid_sigma_email($sigmaaddress) {
-  // check an email address is possibly valid
-  if (ereg('^[a-zA-Z0-9_\.\-]+@[sigmaspace.com]+$', $sigmaaddress)) {
-    return true;
-  } else {
-    return false;
-	echo "I'm sorry, we only accept SigmaSpace Email accounts. Please go back and use a valid Sigma email.<br /><br />";
-  }
-}
-
 function valid_fromdate($date) {
   // check a from date is possibly valid
   if (ereg('^[a-zA-Z0-9_\.\-]', $date)) {
