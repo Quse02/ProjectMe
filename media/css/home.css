@@ -2,9 +2,11 @@
 STRUCTURE
 ******************************************************************************/
 body {
-    background: #444444 url(../images/grey_wash_wall.png) repeat;
-    font-family: 'Open Sans', sans-serif;
-	font-size: 12pt;  
+    background: #031A1F url(../images/DCskyline.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    /*font-family: 'Open Sans', sans-serif; */
+    font-family: 'Merriweather', serif;
+    font-size: 12pt;
 	line-height: 1.2em;
     margin: 0px;
 	}
@@ -13,7 +15,7 @@ html, body {height: 100%;}
 
 #main-container {
     width: 100%;
-    min-height: 100%;
+    min-height: 650px;
 }
 
 #head-container {
@@ -99,7 +101,6 @@ html, body {height: 100%;}
         background-image: -moz-linear-gradient(top, #84B9D8, #84B9D8);
         background-image: -o-linear-gradient(top, #84B9D8, #84B9D8);
         background-image: linear-gradient(#84B9D8, #84B9D8);
-        box-shadow: 0px 4px 4px #444444;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         border-radius: 3px;
@@ -139,7 +140,6 @@ html, body {height: 100%;}
         display: block;
         width: 100%;
         border: 0;
-        box-shadow: 0px 4px 4px #444444;
         height: 1px;
         background-image: linear-gradient(to right, transparent, #ffffff, transparent);
     }
@@ -148,7 +148,6 @@ html, body {height: 100%;}
 FOOTER
 *****************************************************/
 #footer-container {
-    background: #444444;
     position: relative;
     width: 100%;
     margin-top: -98px; /* negative value of footer height */
