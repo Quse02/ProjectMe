@@ -25,7 +25,7 @@ html {
 }
 /* html element 62.5% font-size for REM use; This = 10px */
 html {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 body {
@@ -44,7 +44,7 @@ html, body {height: 100%;}
 
 #main-container {
     width: 100%;
-    min-height: 650px;
+    min-height: 750px;
 }
 
 #head-container {
@@ -86,6 +86,7 @@ html, body {height: 100%;}
     #menu {
         width: 70%;
         float: right;
+        font-size: 1.2em;
         font-family: 'Open Sans', sans-serif;
         top: 12px;
         padding: 0;
@@ -130,11 +131,9 @@ html, body {height: 100%;}
     }
 
     #menu > ul > li:hover > a {
-        background-color: #84B9D8;
-        border-color: #84B9D8;
         border-radius: 2px;
-        color: #000;
-        text-shadow: #fff -1px -1px 2px;
+        color: #84B9D8;
+        text-shadow: #000 -1px -1px 2px;
         transition: color 0.3s ease-in,
         background-color 0.3s ease-in,
         border-color 0.3s ease-in;
@@ -155,8 +154,8 @@ FOOTER
 #footer-container {
     position: relative;
     width: 100%;
-    margin-top: -98px; /* negative value of footer height */
-    height: 90px;
+    margin-top: -48px; /* negative value of footer height */
+    height: 50px;
     clear:both;
 }
 
@@ -176,25 +175,25 @@ FOOTER
         display: inline-block;
         background: transparent url(../images/facebook.png) no-repeat;
         background-size: contain;
-        height: 33px;
-        width: 33px;
-        margin: 0px 3px;
+        height: 30px;
+        width: 30px;
+        margin: 0px 5px;
     }
     .twitter_icon {
         display: inline-block;
         background: transparent url(../images/twitter-bird.png) no-repeat;
         background-size: contain;
-        height: 33px;
-        width: 33px;
-        margin: 0px 3px;
+        height: 30px;
+        width: 30px;
+        margin: 0px 5px;
     }
     .linkedin_icon {
         display: inline-block;
         background: transparent url(../images/linkedin.png) no-repeat;
         background-size: contain;
-        height: 33px;
-        width: 33px;
-        margin: 0px 3px;
+        height: 30px;
+        width: 30px;
+        margin: 0px 5px;
     }
 
 #more_info {
@@ -202,27 +201,25 @@ FOOTER
 }
 
 /*****************************************************
-MAIN CONTENT DIV'S
+HOME CONTENT DIV'S
 *****************************************************/
 #content {
     width: 100%;
     position:relative;
     overflow:auto;
-    padding-bottom: 98px;
+    padding-bottom: 48px;
 }
 
 #main {
 	position:relative;
     width: 1100px;
-    min-height: 550px;
+    min-height: 600px;
     margin: 0 auto;
 }
     #main .name {
         position: relative;
-        text-align: center;
         width: 100%;
-        margin: 0 auto;
-        font-size: 1.600em;
+        font-size: 1.400em;
         text-shadow: #222222 -2px -2px 4px;
         color: #ffffff;
     }
@@ -234,56 +231,113 @@ MAIN CONTENT DIV'S
         text-shadow: #222222 -2px -2px 4px;
         color: #ffffff;
     }
-        #bg-wrapper {
-            background: #E6E6E6;
-            -webkit-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-            -moz-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-            box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-            width: 100%;
-            opacity: .9;
+    #main .quote {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: .900em;
+        text-shadow: #222222 -2px -2px 4px;
+        color: #ffffff;
+        opacity: .7;
+    }
+
+/*****************************************************
+ABOUT CONTENT DIV'S
+*****************************************************/
+#about-quote {
+    width: 1100px;
+    margin: 0 auto;
+    color: #ffffff;
+    opacity: .7;
+    font-size: .900em;
+    text-shadow: #222222 -2px -2px 4px;
+    padding: 0px 0px 20px 0px;
+    height: 40px;
+}
+    #about-quote p {
+        float:right;
+    }
+
+#bg-wrapper {
+    background: #E6E6E6;
+    -webkit-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    -moz-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    width: 100%;
+    opacity: .9;
+    margin-top: 70px;
+}
+    #about {
+        position:relative;
+        width: 1100px;
+        margin: 10px auto;
+        padding: 20px 0px;
+    }
+
+        #left-side {
+            position: relative;
+            width: 25%;
+            display: inline-block;
         }
-            #about {
-                position:relative;
-                width: 1100px;
-                margin: 20px auto;
-                padding: 10px 0px;
+
+            .circular-square {
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
             }
 
-                #left-side {
-                    position: relative;
-                    width: 25%;
-                    display: inline-block;
+            #social_section {
+                display: block;
+                margin: 0 auto;
+            }
+
+                .social_icons {
+                    width: 20px;
+                    height: 20px;
+                    margin: 17px;
                 }
 
-                    .circular-square {
-                        border-radius: 50%;
-                        width: 250px;
-                        height: 250px;
-                    }
+        #right-side {
+            position: relative;
+            float: right;
+            width: 70%;
+            display: inline-block;
+        }
 
-                    #social_section {
-                        display: block;
-                        margin: 0 auto;
-                    }
+/*****************************************************
+SKILLSET CONTENT DIV'S
+*****************************************************/
+#skill {
+    position:relative;
+    width: 1100px;
+    margin: 10px auto;
+    padding: 20px 0px;
+}
 
-                        .social_icons {
-                            width: 20px;
-                            height: 20px;
-                            margin: 17px;
-                        }
-
-                #right-side {
-                    position: relative;
-                    float: right;
-                    width: 70%;
-                    display: inline-block;
-                }
-
+#skill-box {
+    background: #E6E6E6;
+    -webkit-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    -moz-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    display: inline-block;
+    margin: 18px;
+    width: 21%;
+    height: 130px;
+    opacity: .8;
+}
+#skill-box img {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+}
+#skill-box:hover {
+    opacity: .99;
+}
 
 /*****************************************************
 BASICS
 *****************************************************/
-p  {padding:3px;}
+p {margin: 10px 0px;}
 img {border:none;}
 h1 {
     color: #ffffff;
@@ -296,6 +350,9 @@ h2 {
 h3 {
     color: #ffffff;
     text-shadow: 0 2px 2px #000000;
+}
+h4 {
+    margin: 15px 0px;
 }
 
 .ghost-button-footer {
