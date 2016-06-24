@@ -29,26 +29,53 @@ html {
 }
 
 body {
-    background: #031A1F url(../images/DCskyline.jpg) no-repeat center center fixed;
+    background: transparent url(../images/tweed.png) repeat;
+}
+body.Home:after {
+    content:"";
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+    display:block;
+
+    background: #ffffff url(../images/DC-monument_updated.jpg) no-repeat 50% 50%;
+    background-size:cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Merriweather',"Times New Roman", Times, serif;
+    font-family: 'Playfair Display', serif;
 	line-height: 1.2em;
-    min-height: 100%;
     margin: 0px;
 	}
 
-html, body {height: 100%;}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
 
 #main-container {
-    width: 100%;
-    min-height: 750px;
+    min-height: 100%;
 }
 
 #head-container {
+    background-image: linear-gradient(to right, transparent, #c2c2c2, transparent);
 	width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 100;
+}
+#head-container:hover {
+    background-image: none;
+    background: #FFFFFF;
+}
+#head-container:hover a {
+    color: #84B9D8;
+    text-shadow: none;
 }
 
 #banner {
@@ -60,8 +87,9 @@ html, body {height: 100%;}
     #logo {
         background: transparent url(../images/Q_logo_small.png) no-repeat;
         height: 40px;
-        width: 20%;
+        width: 15%;
         top: 5px;
+        left: 10px;
         position: relative;
         display: inline-block;
     }
@@ -80,15 +108,73 @@ html, body {height: 100%;}
             left: 40px;
         }
 
+/* Gradient color1 - color2 - color1 */
+hr.style-one-head {
+    display: block;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    margin-bottom: 0px;
+    background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+}
+hr.style-one-foot {
+    display: block;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    margin-top: 0px;
+    background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+}
+
+#content {
+    width: 100%;
+    position:relative;
+    overflow:auto;
+    padding-bottom: 60px;
+}
+#main-content {
+    width: 100%;
+    max-width: 1100px;
+    position:relative;
+    margin: 0 auto;
+    overflow:auto;
+    padding: 60px 0px;
+}
+
+#page1 {
+    display: inline-block;
+    width: 100%;
+    height: 1000px;
+}
+#page2 {
+    background: transparent url(../images/grey_wash_wall.png) repeat;
+    display: inline-block;
+    width: 100%;
+    padding: 75px 0px;
+}
+#page3 {
+    background: transparent url(../images/grey_wash_wall.png) repeat;
+    display: inline-block;
+    width: 100%;
+    padding: 75px 0px;
+}
+#page4 {
+    background: transparent url(../images/grey_wash_wall.png) repeat;
+    display: inline-block;
+    width: 100%;
+    height: 1000px;
+    padding-top: 75px;
+}
+
 /******************************************************
   Menu
 ******************************************************/
     #menu {
-        width: 70%;
+        width: 80%;
         float: right;
         font-size: 1.2em;
-        font-family: 'Open Sans', sans-serif;
-        top: 12px;
+        font-family: 'Work Sans', sans-serif;
+        top: 15px;
         padding: 0;
         margin: 0;
         border: 0;
@@ -114,9 +200,8 @@ html, body {height: 100%;}
     #menu ul a {
         float: right;
         display: inline-block;
-        width: 100px;
         font-size: 0.875em;
-        padding: 3px;
+        padding: 3px 15px;
         color: #fff;
         background-color: transparent;
         border: 0px solid #fff;
@@ -139,238 +224,129 @@ html, body {height: 100%;}
         border-color 0.3s ease-in;
     }
 
-    /* Gradient color1 - color2 - color1 */
-    hr.style-one {
-        display: block;
-        width: 100%;
-        border: 0;
-        height: 1px;
-        background-image: linear-gradient(to right, transparent, #ffffff, transparent);
-    }
-
 /*****************************************************
 FOOTER
 *****************************************************/
 #footer-container {
-    position: relative;
+    background-image: linear-gradient(to right, transparent, #c2c2c2, transparent);
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    margin-top: -48px; /* negative value of footer height */
-    height: 50px;
+    margin-top: -60px; /* negative value of footer height */
+    height: 60px;
     clear:both;
 }
 
 #footer {
-    width: 1100px;
+    font-family: 'Work Sans', sans-serif;
+
+    max-width: 1100px;
+    width: 100%;
 	margin: 0 auto;
     color: #ffffff;
 }
-
-#social_media_icons {
+#more_info {
+    width: 40%;
+    display: inline-block;
     position: relative;
-    top: 5px;
+    top: -10px;
+}
+#links {
+    width: 20%;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+}
+#social_media_icons {
+    width: 30%;
     float: right;
-    width: 27%;
+    position: relative;
+    top: -10px;
+    right: 15px;
+}
+#social_media_icons ul,
+#social_media_icons li {
+    float: right;
+    list-style: none;
+}
+#social_media_icons ul li {
+    float: left;
+    vertical-align: middle;
+}
+#links ul,
+#links li {
+    list-style: none;
+}
+#links ul li {
+    float: left;
+    vertical-align: middle;
+    padding: 0px 10px;
+}
+#links ul li:first-child {
+    border-right: 1px solid #FFFFFF;
+}
+#links ul li a {
+    text-shadow: #222222 -2px -2px 4px;
+    color: #fff;
+    cursor: pointer;
+}
+#links ul li a:hover {
+    text-shadow: #222222 -2px -2px 4px;
+    color: #84B9D8;
+}
+/* Custom CSS Styles */
+#social_media_icons ul a {
+    float: right;
 }
     .facebook_icon {
         display: inline-block;
         background: transparent url(../images/facebook.png) no-repeat;
         background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin: 0px 5px;
+        height: 22px;
+        width: 22px;
+        margin: 0px 3px;
     }
     .twitter_icon {
         display: inline-block;
         background: transparent url(../images/twitter-bird.png) no-repeat;
         background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin: 0px 5px;
+        height: 22px;
+        width: 22px;
+        margin: 0px 3px;
     }
     .linkedin_icon {
         display: inline-block;
         background: transparent url(../images/linkedin.png) no-repeat;
         background-size: contain;
-        height: 30px;
-        width: 30px;
+        height: 22px;
+        width: 22px;
         margin: 0px 5px;
     }
 
-#more_info {
-    width: 60%;
-}
-
-/*****************************************************
-HOME CONTENT DIV'S
-*****************************************************/
-#content {
-    width: 100%;
-    position:relative;
-    overflow:auto;
-    padding-bottom: 48px;
-}
-
-#main {
-	position:relative;
-    width: 1100px;
-    min-height: 600px;
-    margin: 0 auto;
-}
-    #main .name {
-        position: relative;
-        width: 100%;
-        font-size: 1.400em;
-        text-shadow: #222222 -2px -2px 4px;
-        color: #ffffff;
-    }
-    #main .occupation {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 1.350em;
-        text-shadow: #222222 -2px -2px 4px;
-        color: #ffffff;
-    }
-    #main .quote {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: .900em;
-        text-shadow: #222222 -2px -2px 4px;
-        color: #ffffff;
-        opacity: .7;
-    }
-
-/*****************************************************
-ABOUT CONTENT DIV'S
-*****************************************************/
-#about-quote {
-    width: 1100px;
-    margin: 0 auto;
-    color: #ffffff;
-    opacity: .7;
-    font-size: .900em;
-    text-shadow: #222222 -2px -2px 4px;
-    padding: 0px 0px 20px 0px;
-    height: 40px;
-}
-    #about-quote p {
-        float:right;
-    }
-
-#bg-wrapper {
-    background: #E6E6E6;
-    -webkit-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-    -moz-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-    box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
-    width: 100%;
-    opacity: .9;
-    margin-top: 70px;
-}
-    #about {
-        position:relative;
-        width: 1100px;
-        margin: 10px auto;
-        padding: 20px 0px;
-    }
-
-        #left-side {
-            position: relative;
-            width: 25%;
-            display: inline-block;
-        }
-
-            .circular-square {
-                border-radius: 50%;
-                width: 250px;
-                height: 250px;
-            }
-
-            #social_section {
-                display: block;
-                margin: 0 auto;
-            }
-
-                .social_icons {
-                    width: 20px;
-                    height: 20px;
-                    margin: 17px;
-                }
-
-        #right-side {
-            position: relative;
-            float: right;
-            width: 70%;
-            display: inline-block;
-        }
-
-/*****************************************************
-SKILLSET CONTENT DIV'S
-*****************************************************/
-#skill {
-    position:relative;
-    width: 1100px;
-    margin: 10px auto;
-    padding: 20px 0px;
-}
-
-#skill-box {
-    background: #E6E6E6;
-    -webkit-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
-    -moz-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
-    box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
-    display: inline-block;
-    margin: 18px;
-    width: 21%;
-    height: 130px;
-    opacity: .8;
-}
-#skill-box img {
-    display: block;
-    margin: 0 auto;
-    padding: 5px;
-}
-#skill-box:hover {
-    opacity: .99;
-}
-
-/*****************************************************
-BASICS
-*****************************************************/
-p {margin: 10px 0px;}
-img {border:none;}
-h1 {
-    color: #ffffff;
-    text-shadow: 0 2px 2px #000000;
-}
-h2 {
-    color: #ffffff;
-    text-shadow: 0 2px 2px #000000;
-}
-h3 {
-    color: #ffffff;
-    text-shadow: 0 2px 2px #000000;
-}
-h4 {
-    margin: 15px 0px;
-}
-
 .ghost-button-footer {
+    text-shadow: none;
     float: right;
     display: inline-block;
-    width: 150px;
+    width: 130px;
     font-size: 12px;
-    padding: 3px 5px;
+    padding: 8px;
     color: #fff;
+    position: relative;
+    top: -7px;
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 5px;
     text-align: center;
     outline: none;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color 0.3s ease-out,
     background-color 0.3s ease-out,
     border-color 0.3s ease-out;
+}
+.ghost-button-footer:link {
+    color: #fff;
 }
 .ghost-button-footer:hover,
 .ghost-button-footer:active {
@@ -383,24 +359,294 @@ h4 {
     border-color 0.3s ease-in;
 }
 
+/*****************************************************
+HOME
+*****************************************************/
+#main {
+	position:relative;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+    #main .name {
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        font-size: 1.400em;
+        text-shadow: #222222 -2px -2px 4px;
+        color: #ffffff;
+        text-align: center;
+    }
+    #main .occupation {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.350em;
+        text-shadow: #222222 -2px -2px 4px;
+        color: #ffffff;
+    }
+
+/*****************************************************
+ABOUT Section
+*****************************************************/
+
+.bg-wrapper {
+    background: #E6E6E6;
+    -webkit-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    -moz-box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    box-shadow: 0px 20px 0px 0px rgba(230,230,230,0.4), 0px -20px 0px 0px rgba(230,230,230,0.4);
+    width: 100%;
+    margin: 40px 0px;
+    display: inline-block;
+}
+    .about {
+        position:relative;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0px auto;
+        padding: 20px 0px;
+    }
+        #left-side {
+            position: relative;
+            width: 25%;
+            display: inline-block;
+            left: 5px;
+        }
+            .circular-square {
+                border-radius: 50%;
+                width: 60%;
+                height: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+            #social_section {
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+            }
+                .social_icons {
+                    width: 20px;
+                    height: 20px;
+                    margin: 10px;
+                }
+        #right-side {
+            position: relative;
+            float: right;
+            width: 70%;
+            display: inline-block;
+        }
+
+/*****************************************************
+SKILLSET Page
+*****************************************************/
+#skill {
+    display: block;
+    position:relative;
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 55px 0px;
+}
+.skill-box {
+    background: #E6E6E6;
+    /*
+    -webkit-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    -moz-box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    box-shadow: 0px 0px 4px 10px rgba(230,230,230,0.4);
+    display: inline-block;
+    */
+    margin: 5px 0px;
+    width: calc(25% - 1em);
+    opacity: .8;
+}
+.skill-box img {
+    width: 95%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px;
+}
+.skill-box:hover {
+    opacity: .99;
+}
+
+/*****************************************************
+PORTFOLIO Page
+*****************************************************/
+#owl-portfolio .owl-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*****************************************************
+Login Page
+*****************************************************/
+#left-side {
+    width: 65%;
+    display: inline-block;
+    float: left;
+    color: #FFFFFF;
+}
+#right-side {
+    float: right;
+    width: 35%;
+    display: inline-block;
+}
+.login-box {
+    width: 100%;
+    display: inline-block;
+    background: #c2c2c2;
+    border: 1px solid #FFFFFF;
+    padding: 5px 20px 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.login-box h2 {
+    margin: 10px auto;
+    text-align: center;
+}
+.login-box input[type=text], .login-box input[type=password], .login-box input[type=email] {
+    width: 100%;
+    margin: 2px 0px;
+    padding: 5px;
+}
+.login-box label {
+    font-size: 0.775em;
+    display: block;
+    margin: 10px 0px;
+}
+.login-box button {
+    float: right;
+    display: inline-block;
+    margin: 5px 0px;
+    padding: 5px 10px;
+}
+.link-box {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    padding: 5px 20px 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.link-box h2 {
+    margin: 10px auto;
+    text-align: center;
+}
+.forget button {
+    float: none;
+    margin: 5px auto;
+    display: block;
+    padding: 5px 10px;
+}
+
+button.btn-delete {
+    background: #c2c2c2 url(../images/delete.png) no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    padding: 3px;
+    margin: 0px 5px;
+}
+button.btn-delete:hover {
+    background: #FFFFFF url(../images/delete.png) no-repeat;
+}
+
+.UserProfile label {
+    background: #444;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 25%;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    margin: 0px 10px 5px;
+    text-align: right;
+}
+
+/*****************************************************
+Main Page
+*****************************************************/
+.Main #right-side {
+    width: 25%;
+}
+.Main .link-box h2 {
+    margin: 0;
+}
+.Main .link-box ul {
+    padding: 0px;
+}
+.project {
+    background: #444444;
+    border: 1px solid #FFFFFF;
+    margin: 10px;
+    width: 30%;
+    display: inline-block;
+}
+.project button {
+    background: transparent;
+    color: #84B9D8;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+}
+
+/*****************************************************
+BASICS
+*****************************************************/
+p {
+    margin: 10px 0px;
+    font-family: 'Work Sans', sans-serif;
+}
+img {border:none;}
+h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+    font-family: 'Playfair Display', serif;
+}
+h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+}
+h3 {
+    color: #ffffff;
+    text-shadow: 0 2px 2px #000000;
+}
+h4 {
+    margin: 15px 0px;
+}
+button {
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 5%;
+}
+ul {
+    list-style: none;
+}
+
 /******************************************************************************
 LINKS
 ******************************************************************************/
 a {
-	color: #ffffff;
+	color: #84B9D8;
 	text-decoration:none; 
 	font-weight: bold; 
 	outline:none; 
 	cursor:pointer;
 }
 a:link {
-	color: #ffffff;
+	color: #84B9D8;
 	text-decoration:none; 
 	font-weight: bold; 
 	outline:none;
 }
 a:visited {
-	color: #ffffff;
+	color: #84B9D8;
 	font-weight: bold; 
 	text-decoration:none; 
 	outline:none;
@@ -417,41 +663,217 @@ a:active {
 	outline:none;
 }
 
-/******************************************************************************
-CONNECT PAGE
-******************************************************************************/
-/*
-#twitter {
-    background: #eeeeee;
-    border: 2px solid #444444;
-    padding: 0px 5px;
-    float: right;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
-}
-*/
 /************************************************************
 RESPONSIVE STYLE
 ************************************************************/
-/*
-@media only screen and (max-width: 1100px) {
+
+/* ----------- Retina Screens ----------- */
+
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+    #page1 {
+        display: inline-block;
+        width: 100%;
+        height: 1200px;
+    }
+    #page2 {
+        display: inline-block;
+        width: 100%;
+        height: 1200px;
+        padding-top: 60px;
+    }
+    #page3 {
+        display: inline-block;
+        width: 100%;
+        height: 1200px;
+        padding-top: 60px;
+    }
+    #page4 {
+        display: inline-block;
+        width: 100%;
+        height: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     body {
-        font-size:120%;
-        .wrap {max-width:770px;
+        font-size:80%;
+        margin: 0px;
+    }
+    #main {
+        width: 100%;
+    }
+    #banner, #main, #more_info {
+        padding: 0px;
+    }
+    #content {
+        min-height: 100px;
+    }
+    #quote {
+        padding: 0px 10px 10px 10px;
+    }
+    .bg-wrapper {
+        margin: 10px 0px 50px 0px;
+    }
+    .about {
+        padding: 15px 10px;
+    }
+    #skill {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .ghost-button-footer {
+        padding: 5px;
+        width: 135px;
+        top: -3px;
     }
 }
 
 @media only screen and (max-width: 800px) {
+    #footer-container {
+        position: relative;
+        background: transparent;
+        height: auto;
+        margin-top: auto;
+    }
+    #head-container {
+        background: transparent;
+    }
+    #main {
+        margin-top: 50px;
+    }
+    #more_info {
+        display: block;
+        text-align: center;
+        width: 100%;
+        top: 0px;
+        margin: 0px;
+        padding: 0px 0 0;
+    }
+    #more_info p {
+        margin: 5px 0px;
+    }
+    #links, #social_media_icons {
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+        float: none;
+        top: 0px;
+        display: inline-block;
+        margin: 5px 0px;
+    }
+    #links ul, #social_media_icons ul {
+        display: block;
+        margin: 0;
+        padding: 0px;
+        float: none;
+    }
+    #links ul li, #social_media_icons ul li {
+        border: none;
+        float: none;
+        display: inline-block;
+    }
+    #links ul li:first-child {
+        border: none;
+    }
+    #left-side {
+        width: 35%;
+    }
+    #right-side {
+        width: 60%;
+    }
+    .skill-box {
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     body {
-        font-size:100%;
+        font-size:70%;
+    }
+    #page2, #page3, #page4 {
+        background: transparent;
+    }
+    .about {
+        padding: 15px 10px 60px 10px;
+    }
+    #left-side {
+        width: 40%;
+    }
+    #right-side {
+        width: 50%;
+    }
+    .skill-box {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #main .name {
+        width: 100%;
+    }
+    .name {
+        top: 150px;
+        text-align: center;
+    }
+    .circular-square {
+        width: 95%;
+        height: 95%;
+    }
+    .about {
+        padding: 25px 10px 60px 10px;
+    }
+    #quote p {
+        margin-left: 0px;
+    }
+    #social_section {
+        width: 70%;
+        padding-bottom: 40px;
+    }
+    #page4 {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .about {
+        padding: 10px;
+    }
+    #left-side {
+        width: 100%;
+        text-align: center;
+    }
+        #social_section {
+            width: 100%;
+            padding-bottom: 0px;
+        }
+    #right-side {
+        width: 100%;
+    }
+    .circular-square {
+        background-color: #3c444d;
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 0%;
+    }
+    .skill-box {
+        width: 42%;
+        margin: 10px;
     }
 }
 
 @media only screen and (max-width: 400px) {
     body {
-        font-size:90%;
+        font-size:70%;
+    }
+    #menu ul a {
+        width: 80px;
     }
 }
-
-*/

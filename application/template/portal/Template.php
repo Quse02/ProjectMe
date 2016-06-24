@@ -1,4 +1,10 @@
-<?php include dirname(__FILE__) . '/Header.php'; ?>
+<?php
+session_start();
+include ('./application/content/data/dbh.php');
+$user = new USER();
+
+include dirname(__FILE__) . '/Header.php';
+?>
 <body>
 <div id="main-container">
     <?php include dirname(__FILE__) . '/Banner.php'; ?>

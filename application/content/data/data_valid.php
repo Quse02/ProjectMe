@@ -1,5 +1,6 @@
 <?php
-
+echo "Test";
+/*
 function filled_out($form_vars) {
   // test that each variable has a value
   foreach ($form_vars as $key => $value) {
@@ -37,5 +38,5 @@ function valid_todate($dateb) {
     return false;
   }
 }
-
+*/
 ?>
