@@ -2,10 +2,17 @@
 class Database
 {
 
+    /* Live
     private $host = "localhost";
     private $db_name = "shaunqua_showcase";
     private $username = "shaunqua_sqadmin";
     private $password = "Mvccocc23";
+     */
+
+    private $host = "localhost";
+    private $db_name = "shaunqua_showcase";
+    private $username = "root";
+    private $password = "";
     public $conn;
 
     public function dbConnection()

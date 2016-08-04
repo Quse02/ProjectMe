@@ -6,9 +6,7 @@ $user = new USER();
 include dirname(__FILE__) . '/Header.php';
 ?>
 <body>
-<div id="main-container">
     <?php include dirname(__FILE__) . '/Banner.php'; ?>
-        <div id="content">
             <?php
             // Only include content if it exists
             if ($_CONTENT) {
@@ -33,8 +31,6 @@ include dirname(__FILE__) . '/Header.php';
                 echo "	<p>Sorry, could not find page</p>";
             }
             ?>
-        </div><!-- End Content -->
-</div><!-- End Container -->
 <?php include dirname(__FILE__) . '/Footer.php'; ?>
 </body>
 

@@ -2,10 +2,7 @@
 $newid = $_SESSION['newid'];
 $newcode = $_SESSION['newCode'];
 
-if(empty($newid) && empty($newcode))
-{
-    $user->redirect('Login');
-}
+if(empty($newid) && empty($newcode)) { $user->redirect('Login'); }
 
 if(isset($newid) && isset($newcode))
 {
@@ -29,8 +26,7 @@ if(isset($newid) && isset($newcode))
 						<button class='close' data-dismiss='alert'>&times;</button>
 						<strong>Sorry!</strong>  Password Doesn't match. 
 						</div>";
-            }
-            else
+            } else
             {
                 $password = md5($cpass);
                 $stmt = $user->runQuery("UPDATE users SET user_pass=:upass WHERE user_id=:uid");
@@ -43,36 +39,34 @@ if(isset($newid) && isset($newcode))
                 header("refresh:5;UserProfile");
             }
         }
-    }
-    else
+    } else
     {
         $msg = "<div class='alert alert-success'>
 				<button class='close' data-dismiss='alert'>&times;</button>
 				No Account found, Try again
 				</div>";
-
     }
-
-}
-
-?>
-<div id="main-content">
-    <div id="left-side">
-        <p><strong>Hey </strong>  <?php echo $rows['first_name'] ?>, lets get that password reset for you.</p>
-        <p>Use the form to the right to change it.</p>
-        <?php
-        if(isset($msg)) {
-            echo $msg;
-        } ?>
-    </div>
-    <div id="right-side">
-        <div class="login-box">
-            <form class="form-signin" method="post">
-                <h2>Password Reset</h2>
-                <input type="password" class="input-block-level" placeholder="New Password" name="pass" required />
-                <input type="password" class="input-block-level" placeholder="Confirm New Password" name="confirm-pass" required />
-                <button class="btn btn-large btn-primary" type="submit" name="btn-reset-pass">Update</button>
-            </form>
+} ?>
+<div class="wrapper-back">
+    <div class="main-back">
+        <div id="left-side">
+            <div class="login-box">
+                <form class="form-signin" method="post">
+                    <h2>Password Reset</h2>
+                    <input type="password" class="input-block-level" placeholder="New Password" name="pass" required />
+                    <input type="password" class="input-block-level" placeholder="Confirm New Password" name="confirm-pass" required />
+                    <button class="btn btn-large btn-primary" type="submit" name="btn-reset-pass">Update</button>
+                </form>
+            </div>
+        </div>
+        <div id="right-side">
+            <p><strong>Hey </strong>  <?php echo $rows['first_name'] ?>, lets get that password reset for you.</p>
+            <p>Use the form to the left to change it.</p>
+            <p>Make a mistake? <a href="#">Return to Profile</a> </p>
+            <?php
+            if(isset($msg)) {
+                echo $msg;
+            } ?>
         </div>
     </div>
 </div>

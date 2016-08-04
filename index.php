@@ -37,7 +37,7 @@ $_CONTENT = getRequestedUri();
 // 2. Include the Template
 include "{$_TEMPLATE_DIR}/{$_TEMPLATE}/Template.php";
 
-// 3. Clean  he buffer (strip whitespace from outgoing html)
+// 3. Clean the buffer (strip whitespace from outgoing html)
 $_HTML = ob_get_clean();
 echo trim($_HTML);
 
@@ -53,21 +53,21 @@ function getRequestedUri() {
 	$BASE = "/Portal";
 	// I don't remember what we called this variable
 	$URI = str_replace($BASE, '', $_SERVER['REQUEST_URI']);
-	
-	$URI = preg_replace("/[^\w\-\/]/", "", $URI);
+
+	//$URI = preg_replace("/[^\w\-\/]/", "", $URI);
 
 	// Check if file exists
 	if (!checkFileExists("{$_CONTENT_DIR}{$URI}.php")) {
 		// Append index if requested file does not exist
 		$b = trim(basename($URI));
-		
+
 		if ($b == "") {
 			$URI .= (substr($URI, -1) == "/") ? "{$_CONTENT_INDX}" : "/{$_CONTENT_INDX}";
 		}
 
 		if (!checkFileExists("{$_CONTENT_DIR}{$URI}.php")) {
 			$URI = true;
-			
+
 			if (!checkFileExists("{$_CONTENT_DIR}{$URI}.php")) {
 				$URI = false;
 			}
@@ -83,20 +83,20 @@ function checkFileExists($file, $type = 'content') {
 			global $_CLASS_DIR;
 			$file = (!empty($_CLASS_DIR))? "{$_CLASS_DIR}/{$file}" : $file;
 			break;
-			
+
 		case 'conf':
 			global $_CONF_DIR;
 			$file = (!empty($_CONF_DIR))? "{$_CONF_DIR}/{$file}" : $file;
 			break;
-				
+
 		case 'content':
 		default:
 			global $_CONTENT_PATH;
 			$p = &$_CONTENT_PATH;
 	}
-	
+
 	$path = checkFileExistsPath($file);
-	 
+
 	if (!$path) {
 		return false;
 	}
@@ -106,7 +106,7 @@ function checkFileExists($file, $type = 'content') {
 			$p = $path;
 			break;
 	}
-	
+
 	return $path;
 }
 
@@ -117,7 +117,7 @@ function checkFileExistsPath($file) {
 			return "{$path}/{$file}";
 		}
 	}
-	
+
 	return false;
 }
 

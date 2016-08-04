@@ -1,9 +1,5 @@
 <?php
-
-if($user->is_logged_in()!="")
-{
-    $user->redirect('Main');
-}
+if($user->is_logged_in()!="") { $user->redirect('Main'); }
 
 if(isset($_POST['btn-signup']))
 {
@@ -12,6 +8,7 @@ if(isset($_POST['btn-signup']))
     $upass = trim($_POST['txt_upass']);
     $fname = trim($_POST['txt_fname']);
     $lname = trim($_POST['txt_lname']);
+    $upic = "tweed.png";
     $code = md5(uniqid(rand()));
 
     $stmt = $user->runQuery("SELECT * FROM users WHERE user_email=:email_id");
@@ -23,13 +20,12 @@ if(isset($_POST['btn-signup']))
         $msg = "
         <div class='alert alert-error'>
     <button class='close' data-dismiss='alert'>&times;</button>
-     <strong>Sorry !</strong>  email already exists , Please Try another one
+     <strong>Sorry!</strong> this email already exists, please try another one.
      </div>
      ";
-    }
-    else
+    } else
     {
-        if($user->register($fname,$lname,$uname,$umail,$upass,$code))
+        if($user->register($fname,$lname,$uname,$umail,$upass,$upic,$code))
         {
             $id = $user->lasdID();
             $key = base64_encode($id);
@@ -60,45 +56,47 @@ if(isset($_POST['btn-signup']))
                     Please click on the confirmation link in the email to create your account. 
                 </div>
             ";
-        }
-        else
+
+        } else
         {
             echo "sorry , Query could no execute...";
         }
     }
 }
 ?>
-<div id="main-content">
-    <div id="left-side">
-        <h2>Sign up now to join my site!</h2>
-            <p>Submit the form to become a member of my admin section.</p>
-            <p>After finishing, you will receive an email in order to activate your account.</p>
-    </div>
-    <div id="right-side">
-        <div class="login-box">
-            <?php if(isset($msg)) echo $msg;  ?>
-            <form class="form-signin" method="post">
-                <h2>Join Now</h2>
-                <div class="form-group">
-                    <input type="text" class="input-block-level" placeholder="Username" name="txt_uname" required />
-                </div>
-                <div class="form-group">
-                    <input type="email" class="input-block-level" placeholder="Email address" name="txt_umail" required />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="input-block-level" placeholder="Password" name="txt_upass" required />
-                </div>
-                <div class="form-group">
-                    <input type="text" class="input-block-level" name="txt_fname" placeholder="First Name" required />
-                </div>
-                <div class="form-group">
-                    <input type="text" class="input-block-level" name="txt_lname" placeholder="Last Name" required />
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-block btn-primary" type="submit" name="btn-signup">Sign Up</button>
-                </div>
-                <label>Have an account already? <a href="Login">Login</a></label>
-            </form>
+<div class="wrapper-back">
+    <div class="main-back">
+        <div id="left-side">
+            <h2>Sign up now to join my site!</h2>
+                <p>Submit the form to become a member of my website.</p>
+                <p>After finishing, you will receive an email in order to activate your account.</p>
+        </div>
+        <div id="right-side">
+            <div class="login-box">
+                <?php if(isset($msg)) echo $msg;  ?>
+                <form class="form-signin" method="post">
+                    <h2>Join Now</h2>
+                    <div class="form-group">
+                        <input type="text" class="input-block-level" placeholder="Username" name="txt_uname" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="input-block-level" placeholder="Email address" name="txt_umail" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="input-block-level" placeholder="Password" name="txt_upass" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="input-block-level" name="txt_fname" placeholder="First Name" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="input-block-level" name="txt_lname" placeholder="Last Name" required />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-block btn-primary" type="submit" name="btn-signup">Sign Up</button>
+                    </div>
+                    <p>Have an account already? <a href="Login">Login</a></p>
+                </form>
+            </div>
         </div>
     </div>
 </div>

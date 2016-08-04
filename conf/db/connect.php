@@ -1,5 +1,5 @@
 <?php
-
+// WE ARE NOT USING THIS!!!
 session_start();
 
 $DB_host = "localhost";

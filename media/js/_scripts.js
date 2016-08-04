@@ -1,59 +1,51 @@
-// Javascript Accordion
+$(function() {
 
-var ContentHeight = 0;
-var TimeToSlide = 500;
-var openAccordion = '';
-var hash = window.location.hash.substring( 1 );
+  // Get the form.
+  var form = $('#ajax-contact');
 
-function runAccordion(index)
-{
-  var nID = "Accordion" + index + "Content";
-  if(openAccordion == nID)
-    nID = '';
-  
-  ContentHeight = document.getElementById("Accordion" + index + "Content"+"_").offsetHeight;
-  setTimeout("animate(" + new Date().getTime() + "," + TimeToSlide + ",'"
-      + openAccordion + "','" + nID + "')", 33);
-  openAccordion = nID;
-}
-function animate(lastTick, timeLeft, closingId, openingId)
-{  
-  var curTick = new Date().getTime();
-  var elapsedTicks = curTick - lastTick;
-  var opening = (openingId == '') ? null : document.getElementById(openingId);
-  var closing = (closingId == '') ? null : document.getElementById(closingId);
- 
-  if(timeLeft <= elapsedTicks)
-  {
-    if(opening != null)
-            opening.style.height = 'auto';
- 
-    if(closing != null)
-    {
-      //closing.style.display = 'none';
-      closing.style.height = '0px';
-    }
-    return;
-  }
- 
-  timeLeft -= elapsedTicks;
-  var newClosedHeight = Math.round((timeLeft/TimeToSlide) * ContentHeight);
+  // Get the messages div.
+  var formMessages = $('#form-messages');
 
-  if(opening != null)
-  {
-    if(opening.style.display != 'block')
-      opening.style.display = 'block';
-    opening.style.height = (ContentHeight - newClosedHeight) + 'px';
-  }
- 
-  if(closing != null)
-    closing.style.height = newClosedHeight + 'px';
+  // Set up an event listener for the contact form.
+  $(form).submit(function(e) {
+    // Stop the browser from submitting the form.
+    e.preventDefault();
 
-  setTimeout("animate(" + curTick + "," + timeLeft + ",'"
-      + closingId + "','" + openingId + "')", 33);
-}
+    // Serialize the form data.
+    var formData = $(form).serialize();
 
-if( hash ) {
-    var accordItem = $('.AccordionTitle_QualityB li#' + hash);
-    if(accordItem) accordItem.next().slideToggle('normal');
-  }
+    // Submit the form using AJAX.
+    $.ajax({
+      type: 'POST',
+      url: $(form).attr('action'),
+      data: formData
+    })
+        .done(function(response) {
+          // Make sure that the formMessages div has the 'success' class.
+          $(formMessages).removeClass('error');
+          $(formMessages).addClass('success');
+
+          // Set the message text.
+          $(formMessages).text(response);
+
+          // Clear the form.
+          $('#name').val('');
+          $('#email').val('');
+          $('#message').val('');
+        })
+        .fail(function(data) {
+          // Make sure that the formMessages div has the 'error' class.
+          $(formMessages).removeClass('success');
+          $(formMessages).addClass('error');
+
+          // Set the message text.
+          if (data.responseText !== '') {
+            $(formMessages).text(data.responseText);
+          } else {
+            $(formMessages).text('Oops! An error occured and your message could not be sent.');
+          }
+        });
+
+  });
+
+});

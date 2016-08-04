@@ -24,18 +24,19 @@ class USER
 		return $stmt;
 	}
 
-	public function register($fname,$lname,$uname,$umail,$upass,$code)
+	public function register($fname,$lname,$uname,$umail,$upass,$upic,$code)
 	{
 		try
 		{
 			$password = md5($upass);
-			$stmt = $this->conn->prepare("INSERT INTO users(first_name,last_name,user_name,user_email,user_pass,tokenCode) 
-                                                VALUES(:fname, :lname, :uname, :umail, :upass, :active_code)");
+			$stmt = $this->conn->prepare("INSERT INTO users(first_name,last_name,user_name,user_email,user_pass,user_pic,tokenCode) 
+                                                VALUES(:fname, :lname, :uname, :umail, :upass, :userpic, :active_code)");
 			$stmt->bindparam(":fname", $fname);
 			$stmt->bindparam(":lname", $lname);
 			$stmt->bindparam(":uname", $uname);
 			$stmt->bindparam(":umail", $umail);
 			$stmt->bindparam(":upass",$password);
+            $stmt->bindParam(":userpic", $upic);
 			$stmt->bindparam(":active_code",$code);
 			$stmt->execute();
 			return $stmt;

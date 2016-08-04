@@ -1,12 +1,8 @@
 <?php
-
 $signid = $_SESSION['signupid'];
 $signcode = $_SESSION['signupcode'];
 
-if(empty($signid) && empty($signcode))
-{
-    $user->redirect('Home');
-}
+if(empty($signid) && empty($signcode)) { $user->redirect('Home'); }
 
 if(isset($signid) && isset($signcode))
 {
@@ -28,40 +24,40 @@ if(isset($signid) && isset($signcode))
             $stmt->bindparam(":uID",$id);
             $stmt->execute();
 
-            $msg = "
-             <div class='alert alert-success'>
-       <button class='close' data-dismiss='alert'>&times;</button>
-       <strong>Your Account is Now Activated! </strong><a href='Login'>Login Now</a>
-          </div>
-          ";
-        }
-        else
-        {
-            $msg = "
-             <div class='alert alert-error'>
-       <button class='close' data-dismiss='alert'>&times;</button>
-       <strong>Sorry!</strong>  Your Account is already Activated! <a href='Login'>Login here</a>
-          </div>
-          ";
-        }
-    }
-    else
-    {
         $msg = "
-         <div class='alert alert-error'>
-      <button class='close' data-dismiss='alert'>&times;</button>
-      <strong>Sorry!</strong>  No Account Found! <a href='Signup'>Signup here</a>
-      </div>
-      ";
+            <div class='alert alert-success'>
+                <button class='close' data-dismiss='alert'>&times;</button>
+                <strong>Your Account is Now Activated! </strong><a href='Login'>Login Now</a>
+            </div>
+        ";
+        } else
+        {
+        $msg = "
+            <div class='alert alert-error'>
+                <button class='close' data-dismiss='alert'>&times;</button>
+                <strong>Sorry!</strong>  Your Account is already Activated! <a href='Login'>Login here</a>
+            </div>
+        ";
+        }
+    } else
+    {
+    $msg = "
+        <div class='alert alert-error'>
+            <button class='close' data-dismiss='alert'>&times;</button>
+            <strong>Sorry!</strong>  No Account Found! <a href='Signup'>Signup here</a>
+        </div>
+    ";
     }
 }
 
 ?>
 
-<div id="main-content">
-    <div id="left-side">
-        <?php if(isset($msg)) {
-            echo "<p>" . $msg . "</p>";
-        } ?>
+<div class="wrapper-back">
+    <div class="main-back">
+        <div id="right-side">
+            <?php if(isset($msg)) {
+                echo "<p>" . $msg . "</p>";
+            } ?>
+        </div>
     </div>
 </div> <!-- main-content -->
