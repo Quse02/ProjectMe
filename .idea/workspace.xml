@@ -52,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/media/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/media/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="687" column="16" selection-start-line="687" selection-start-column="16" selection-end-line="687" selection-end-column="16" />
+            <state relative-caret-position="446">
+              <caret line="692" column="1" selection-start-line="692" selection-start-column="1" selection-end-line="692" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -132,9 +132,9 @@
         <option value="$PROJECT_DIR$/application/template/portal/Header.php" />
         <option value="$USER_HOME$/Downloads/bootstrap-delete-confirm-modal/bootstrap-delete-confirm-modal/index.php" />
         <option value="$PROJECT_DIR$/application/content/Test.php" />
-        <option value="$PROJECT_DIR$/media/css/main.css" />
         <option value="$PROJECT_DIR$/application/content/Project.php" />
         <option value="$PROJECT_DIR$/media/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/media/css/main.css" />
       </list>
     </option>
   </component>
@@ -398,12 +398,12 @@
       <workItem from="1470671432236" duration="654000" />
       <workItem from="1470749984523" duration="10125000" />
       <workItem from="1470929083828" duration="2717000" />
-      <workItem from="1471009329267" duration="12376000" />
+      <workItem from="1471009329267" duration="12693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103681000" />
+    <option name="totallyTimeSpent" value="103998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -799,14 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="687" column="16" selection-start-line="687" selection-start-column="16" selection-end-line="687" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/template/portal/Header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -831,6 +823,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="692" column="1" selection-start-line="692" selection-start-column="1" selection-end-line="692" selection-end-column="1" />
           <folding />
         </state>
       </provider>

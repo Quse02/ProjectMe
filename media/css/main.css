@@ -677,20 +677,10 @@ Login Page
     padding: 5px 10px;
 }
 
-a.delete-product {
-    background: #c2c2c2 url(../images/delete.png) no-repeat;
-    background-position: center;
+a.delete_product {
     height: 30px;
     width: 30px;
-    padding: 10px 20px;
-    margin: 0px 5px;
-}
-a.delete-product:hover {
-    background: #FFFFFF url(../images/delete.png) no-repeat;
-    background-position: center;
-    height: 30px;
-    width: 30px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 0px 5px;
 }
 
