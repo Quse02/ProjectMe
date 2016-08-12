@@ -51,9 +51,15 @@ if(isset($_POST['btn-upload']))
     $stmt->bindParam(":file_id", $_SESSION['project_id']);
     $stmt->execute();
     ?>
-    <script>
-        alert('File Deleted Successfully');
-        window.location.href='Project';
+    <script type="text/javascript" src="media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="media/js/bootbox.min.js"></script>
+    <script type="text/javascript">
+         bootbox.confirm("Are you sure you want to remove this file?", function(result) {
+         // delete code here
+         if (result === true) {
+         alert('File Deleted Successfully');
+         }
+         });
     </script>
 <?php
 } ?>
@@ -80,12 +86,13 @@ if(isset($_POST['btn-upload']))
         </div>
         <div id="right-side">
             <h2>Site Details</h2>
-            <p>Live URL: <a href="<?php echo $_SESSION['project_url']; ?>" target="_blank"><?php echo $_SESSION['project_url']; ?></a><br />
-            Development Site: TBD<br />
-                <a href="#" target="_blank">Submit </a> a Feature Request/Change</p>
+            <p><strong>Live URL:</strong> <a href="<?php echo $_SESSION['project_url']; ?>" target="_blank"><?php echo $_SESSION['project_url']; ?></a><br />
+            <strong>Development Site:</strong> TBD<br />
+            <strong>Project Status:</strong> <?php echo $_SESSION['project_status']; ?></p>
+            <p><a href="#" target="_blank">Submit </a> a Feature Request/Change</p>
             <h2>File Manager</h2>
             <div class="login-box">
-                <h3>Upload - Add a document, image, pdf, or spreadsheet</h3>
+                <h3>Upload - Add a document, pdf, or spreadsheet</h3>
                 <form method="post" enctype="multipart/form-data">
                     <input type="file" name="file" accept="image/*" />
                     <button type="submit" name="btn-upload">Submit</button>
@@ -112,14 +119,56 @@ if(isset($_POST['btn-upload']))
 
                                 ?>
                                 <?php echo $output['file'] ?> </a>(<?php echo $output['size'] ?>KB)
-                                <button type="submit" class="btn-delete" name="btn-delete"></button>
+                                <a class="delete_product" data-id="<?php echo $product_id; ?>" href="javascript:void(0)">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                </a>
                             </li>
                         <?php }
                     } ?>
                 </form>
             </ul>
-            <h2>Changelog</h2>
-            <h2>Contacts</h2>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="media/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="media/js/bootbox.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('.delete_product').click(function(e){
+
+            e.preventDefault();
+
+            var pid = $(this).attr('data-id');
+            var parent = $(this).parent("td").parent("tr");
+
+            bootbox.dialog({
+                message: "Are you sure you want to Delete ?",
+                title: "<i class='glyphicon glyphicon-trash'></i> Delete !",
+                buttons: {
+                    success: {
+                        label: "No",
+                        className: "btn-success",
+                        callback: function() {
+                            $('.bootbox').modal('hide');
+                        }
+                    },
+                    danger: {
+                        label: "Delete!",
+                        className: "btn-danger",
+                        callback: function() {
+
+                            $.post('Test', { 'delete':pid })
+                                .done(function(response){
+                                    location.reload();
+                                })
+                                .fail(function(){
+                                    bootbox.alert('Something Went Wrong.');
+                                })
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>

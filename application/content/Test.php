@@ -1,21 +1,9 @@
-<div class="main">
+<?php
+if ($_REQUEST['delete']) {
 
-    <section id="fadeInAnim">
-        <div class="section-content">
-            <p>Section one content</p>
-        </div>
-    </section>
-    <section id="revealAnim">
-        <div class="section-content">
-            <p>Section two content</p>
-        </div>
-    </section>
-    <section id="betweenSlidesAnimStart">
-        <div class="section-content">
-            <p>Section three content</p>
-        </div>
-    </section>
+    $stmt = $user->runQuery("DELETE FROM tbl_uploads WHERE id=:file_id");
+    $stmt->bindParam(":file_id", $_SESSION['project_id']);
+    $stmt->execute();
+}
 
-</div>
-
-
+?>

@@ -163,10 +163,11 @@ hr.style-one-foot {
     margin: 0 auto 0;
     max-width: 1100px;
     z-index: 3;
+    padding-bottom: 60px;
 }
 
 .main section  {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .main section > img {
@@ -413,6 +414,16 @@ FOOTER
         position: relative;
         top: -5px;
     }
+    .github_icon {
+        display: inline-block;
+        background: transparent url(../images/github.png) no-repeat;
+        background-size: contain;
+        height: 30px;
+        width: 30px;
+        margin-right: 5px;
+        position: relative;
+        top: -5px;
+    }
     .linkedin_icon {
         display: inline-block;
         background: transparent url(../images/linkedin.png) no-repeat;
@@ -530,9 +541,11 @@ HOME
         margin: 5px 0px;
         width: calc(25% - 1em);
         opacity: .8;
+        padding: 0px 10px 15px;
+        font-size: 0.800em;
     }
         .skill-box img {
-            width: 95%;
+            width: 30%;
             display: block;
             height: auto;
             margin: 0 auto;
@@ -540,6 +553,11 @@ HOME
         }
         .skill-box:hover {
             opacity: .99;
+        }
+        .skill-box h2 {
+            color: #222222;
+            text-shadow: 0 2px 2px #fff;
+            text-align: center;
         }
 
     #owl-portfolio .owl-item img{
@@ -659,16 +677,21 @@ Login Page
     padding: 5px 10px;
 }
 
-button.btn-delete {
+a.delete-product {
     background: #c2c2c2 url(../images/delete.png) no-repeat;
     background-position: center;
     height: 30px;
     width: 30px;
-    padding: 3px;
+    padding: 10px 20px;
     margin: 0px 5px;
 }
-button.btn-delete:hover {
+a.delete-product:hover {
     background: #FFFFFF url(../images/delete.png) no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    padding: 10px 20px;
+    margin: 0px 5px;
 }
 
 /*****************************************************
@@ -840,8 +863,9 @@ RESPONSIVE STYLE
         margin: 5px 0px;
     }
     #social_media_icons {
-        width: 40%;
+        width: 85%;
     }
+
     #links {
         text-align: center;
         width: 100%;
@@ -872,8 +896,11 @@ RESPONSIVE STYLE
         width: 60%;
     }
     .skill-box {
-        width: 21%;
+        width: 23%;
     }
+        .skill-box img {
+            width: 50%;
+        }
     .about-text {
         opacity: .99;
     }
@@ -886,9 +913,7 @@ RESPONSIVE STYLE
     #logo {
         top: 5px;
     }
-    #social_media_icons {
-        width: 55%;
-    }
+
     .about {
         padding: 15px 10px 60px 10px;
     }
@@ -916,9 +941,7 @@ RESPONSIVE STYLE
     #quote p {
         margin-left: 0px;
     }
-    #social_media_icons {
-        width: 85%;
-    }
+
     body .main section .page_container {
     }
     .rehide {
@@ -949,6 +972,12 @@ RESPONSIVE STYLE
         background-color: transparent;
         border: none;
     }
+    .skill-box {
+        width: 22%;
+    }
+        .skill-box img {
+            width: 70%;
+        }
 }
 
 @media only screen and (max-width: 425px) {

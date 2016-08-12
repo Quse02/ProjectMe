@@ -24,6 +24,7 @@ if($user->is_logged_in()) {
                 echo "<ul>
                         <li><a class='facebook_icon' href='https://www.facebook.com/ShaunQuartier' target='_blank'></a></li>
                         <li><a class='twitter_icon' href='https://twitter.com/TheQuse' target='_blank'></a></li>
+                        <li><a class='github_icon' href='https://github.com/Quse02' target='_blank'></a></li>
                         <li><a class='linkedin_icon' href='https://www.linkedin.com/in/quartiers' target='_blank'></a></li>
                         <li><a class='ghost-button-footer' href='Contact'>Contact Me</a></li>
                       </ul>";

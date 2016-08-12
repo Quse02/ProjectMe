@@ -9,6 +9,7 @@
     <meta name="robots" content="index, follow" />
     <title>Shaun Quartier - My Showcase</title>
 
+    <link rel='stylesheet' href='media/css/bootstrap.min.css' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
@@ -27,6 +28,7 @@
     <script type="text/javascript" src="media/js/owl.carousel.js"></script>
     <script type="text/javascript" src="media/js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="media/js/jquery.onepage-scroll.js"></script>
+
 
     <script type="application/javascript">
         $(document).ready(function() {

@@ -40,6 +40,7 @@ $project_row = $project_stmt->fetchAll(PDO::FETCH_ASSOC);
                         {
                             $_SESSION['project_name'] = $project['name'];
                             $_SESSION['project_url'] = $project['url'];
+                            $_SESSION['project_status'] = $project['status'];
                             $user->redirect('Project');
                         }
                     }

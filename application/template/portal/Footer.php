@@ -8,7 +8,7 @@
             <ul>
                 <?php
                 if(!$user->is_logged_in()) {
-                    echo "<li><a href=\"\">Showcase</a></li>
+                    echo "<li><a href=\"/\">Showcase</a></li>
                           <li><a href=\"Login\">Login</a></li>";
                 } ?>
             </ul>

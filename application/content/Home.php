@@ -24,14 +24,16 @@
         <section class="page3">
             <div class="page_container">
                 <div id="skill">
-                    <div class="skill-box"><img src="../media/images/php-skill.png" alt="php icon" /></div>
-                    <div class="skill-box"><img src="../media/images/js-skill.png" alt="javascript icon" /></div>
-                    <div class="skill-box"><img src="../media/images/css3-skill.png" alt="css icon" /></div>
-                    <div class="skill-box"><img src="../media/images/HTML5-skill.png" alt="html icon" /></div>
-                    <div class="skill-box"><img src="../media/images/apache-skill.png" alt="apache icon" /></div>
-                    <div class="skill-box"><img src="../media/images/wordpress-skill.png" alt="wordpress icon" /></div>
-                    <div class="skill-box"><img src="../media/images/jQuery-skill.gif" alt="jQuery icon" /></div>
-                    <div class="skill-box"><img src="../media/images/MySQL-skill.png" alt="mysql icon" /></div>
+                    <div class="skill-box"><h2>PHP</h2><img src="../media/images/php-skill.png" alt="php icon" /><p>Server side language that I use on all projects.</p></div>
+                    <div class="skill-box"><h2>Javascript</h2><img src="../media/images/js-skill.png" alt="javascript icon" /><p>I use many different Javascript tools and libraries with each of my builds.</p></div>
+                    <div class="skill-box"><h2>CSS 3</h2><img src="../media/images/css3-skill.png" alt="css icon" /><p>Styling with the latest CSS coding standards help make my products look clean and responsive.</p></div>
+                    <div class="skill-box"><h2>HTML 5</h2><img src="../media/images/HTML5-skill.png" alt="html icon" /><p>I have been building pages using HTML for the past 15 years</p></div>
+                    <div class="skill-box"><h2>Linux</h2><img src="../media/images/apache-skill.png" alt="apache icon" /><p>I have experience and prefer building products using a LAMP stack.</p></div>
+                    <div class="skill-box"><h2>Wordpress</h2><img src="../media/images/wordpress-skill.png" alt="wordpress icon" /><p>Most of my clients have sites built in Wordpress so that they can manage content easily.</p></div>
+                    <div class="skill-box"><h2>JQuery</h2><img src="../media/images/JQuery-skill.png" alt="jQuery icon" /><p>My favorite Javascript library, and use it for scrolling, accordion, and validation features.</p></div>
+                    <div class="skill-box"><h2>MySQL</h2><img src="../media/images/MySQL-skill.png" alt="mysql icon" /><p>The database solution that I use to host my data and display it on my products.</p></div>
+                    <div class="skill-box"><h2>Responsive Design</h2><img src="../media/images/phone-skill.png" alt="phone icon" /><p>All of the sites, or products that I build are fully responsive on tablet and mobile.</p></div>
+                    <div class="skill-box"><h2>Github</h2><img src="../media/images/github-skill.png" alt="github icon" /><p>I use Git to host my code for my personal projects and to find other ideas.</p></div>
                 </div>
             </div>
         </section>
