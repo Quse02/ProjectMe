@@ -61,54 +61,78 @@ body.night {
     -o-background-size: cover;
 }
 
-body.NotHome {
-    background: #ffffff url(../images/wallpaper/concrete_seamless.png) repeat;
-}
-
 html, body {
     height: 100%;
     margin: 0px;
 }
 
-#head-container {
-    background-image: linear-gradient(to right, transparent, #c2c2c2, transparent);
-	width: 100%;
+/* Header Styles */
+header {
     position: fixed;
+    width: 100%;
     top: 0;
     left:0;
     z-index: 100;
 }
 
-#banner {
-	max-width: 1100px;
-    width: 100%;
-	margin: 0 auto;
-    height: 40px;
+.header__container {
+    background-image: linear-gradient(to right, #666, transparent, #666);
 }
-    #logo {
+    .header__container__inner {
+        padding: 10px 20px;
+        display: flex;
+    }
+    .logo {
         background: transparent url(../images/Q_logo.png) no-repeat;
         background-size: contain;
         height: 40px;
-        width: 4%;
-        top: 7px;
-        left: 10px;
-        position: relative;
-        display: inline-block;
+        width: 40px;
+        flex-basis: 2%;
     }
-        #logo a {
+        .logo a {
             display: block;
             height: 40px;
-            left: 0;
-            position: absolute;
             width:40px;
-            text-indent: -9999px;
-            overflow:hidden;
         }
-        #logo h3 {
-            color: #ffffff;
-            position: relative;
-            left: 40px;
+
+    .social-icons {
+        width: 30%;
+        flex-basis: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .social-icons__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 30px;
+        width: 30px;
+        list-style: none;
+        margin: 0 5px 0 0;
+        padding: 0;
+    }
+        .social-icons__item:last-child {
+            margin: 0;
         }
+        /* Social Icon Styles */
+        .fa {
+            color: #fff;
+            cursor: pointer;
+        }
+        .fa-facebook:hover {
+            color: #3b5998;
+        }
+        .fa-twitter:hover {
+            color: #00aced;
+        }
+        .fa-github:hover {
+            color: #000;
+        }
+        .fa-linkedin:hover {
+            color: #007bb6;
+        }
+
 
     .menu {
         text-shadow: #eee -1px -1px 2px;
@@ -132,17 +156,60 @@ hr.style-one-head {
     width: 100%;
     border: 0;
     height: 1px;
-    margin-bottom: 0px;
-    background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+    margin: 0;
+    background-image: linear-gradient(to right, transparent, #666, transparent);
 }
 hr.style-one-foot {
     display: block;
     width: 100%;
     border: 0;
     height: 1px;
-    margin-top: 0px;
-    background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+    margin: 0px;
+    background-image: linear-gradient(to right, transparent, #666, transparent);
 }
+
+/* Footer Style */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    z-index: 100;
+}
+.footer__container {
+    background-image: linear-gradient(to right, #666, transparent, #666);
+    margin-top: -60px; /* negative value of footer height */
+    height: 60px;
+    clear:both;
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+}
+.footer__container__inner {
+    padding: 10px 20px;
+    display: flex;
+}
+.more_info {
+    flex-basis: 20%;
+}
+.links {
+    width: 30%;
+    flex-basis: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.links__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+    .links__item:last-child {
+        margin: 0 ;
+    }
+
 
 .wrapper {
     height: 100% !important;
@@ -325,115 +392,8 @@ body.disabled-onepage-scroll .main section.page3 .page_container {
 /*****************************************************
 FOOTER
 *****************************************************/
-#footer-container {
-    background-image: linear-gradient(to right, transparent, #c2c2c2, transparent);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-top: -60px; /* negative value of footer height */
-    height: 60px;
-    clear:both;
-}
 
-#footer {
-    font-family: 'Work Sans', sans-serif;
 
-    max-width: 1100px;
-    width: 100%;
-	margin: 0 auto;
-    text-shadow: #222222 -2px -2px 4px;
-    color: #ffffff;
-}
-#more_info {
-    width: 40%;
-    display: inline-block;
-    position: relative;
-}
-#links {
-    float: right;
-    width: 20%;
-    display: inline-block;
-    position: relative;
-    top: -5px;
-}
-#social_media_icons {
-    width: 30%;
-    float: right;
-    position: relative;
-}
-#social_media_icons ul,
-#social_media_icons li {
-    float: right;
-    list-style: none;
-    margin-bottom: 0px;
-}
-#social_media_icons ul li {
-    float: left;
-    vertical-align: middle;
-}
-#links ul,
-#links li {
-    list-style: none;
-}
-#links ul li {
-    float: left;
-    vertical-align: middle;
-    padding: 0px 10px;
-}
-
-#links ul li a {
-    text-shadow: #222222 -1px -1px 2px;
-    color: #84B9D8;
-    cursor: pointer;
-}
-#links ul li a:hover {
-    text-shadow: #eee -1px -1px 2px;
-    color: #84B9D8;
-}
-/* Custom CSS Styles */
-#social_media_icons ul a {
-    float: right;
-}
-    .facebook_icon {
-        display: inline-block;
-        background: transparent url(../images/facebook.png) no-repeat;
-        background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin-right: 5px;
-        position: relative;
-        top: -5px;
-    }
-    .twitter_icon {
-        display: inline-block;
-        background: transparent url(../images/twitter-bird.png) no-repeat;
-        background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin-right: 5px;
-        position: relative;
-        top: -5px;
-    }
-    .github_icon {
-        display: inline-block;
-        background: transparent url(../images/github.png) no-repeat;
-        background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin-right: 5px;
-        position: relative;
-        top: -5px;
-    }
-    .linkedin_icon {
-        display: inline-block;
-        background: transparent url(../images/linkedin.png) no-repeat;
-        background-size: contain;
-        height: 30px;
-        width: 30px;
-        margin-right: 5px;
-        position: relative;
-        top: -5px;
-    }
 
 .ghost-button-footer {
     text-shadow: none;

@@ -5,7 +5,7 @@
             <div class="page_container">
                 <div class="name">
                     <h1>Shaun Quartier</h1><p><em>Web Developer</em></p><br /><br />
-                    <p>Don't tell me the sky is the limit when there are footprints on the moon.<br /> -Paul Brandt</p>
+                    <p>Changes coming soon.. </p>
                 </div>
             </div>
         </section>

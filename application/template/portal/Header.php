@@ -10,6 +10,7 @@
     <title>Shaun Quartier - My Showcase</title>
 
     <link rel='stylesheet' href='media/css/bootstrap.min.css' type='text/css'>
+    <link rel="stylesheet" href="media/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
